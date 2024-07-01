@@ -1,0 +1,142 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3rem;
+  
+    /*========== Colors ==========*/
+    /* Change favorite color to match images */
+    /*Green dark 190 - Green 171 - Grren Blue 200*/
+    --hue-color: 190;
+  
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 64%, 22%);
+    --first-color-second: hsl(var(--hue-color), 64%, 22%);
+    --first-color-alt: hsl(var(--hue-color), 64%, 15%);
+    --title-color: hsl(var(--hue-color), 64%, 18%);
+    --second-color: hsl(195, 75%, 52%);
+    --text-color: hsl(var(--hue-color), 24%, 35%);
+    --text-color-light: hsl(var(--hue-color), 8%, 60%);
+    --input-color: hsl(var(--hue-color), 24%, 97%);
+    --body-color: hsl(var(--hue-color), 29%, 12%);
+    --white-color: #FFF;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+  
+    /*========== Font and typography ==========*/
+    --body-font: 'Open Sans', sans-serif;
+    --title-font: 'Raleway', sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== Margenes Bottom ==========*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  
+    /*========== Hover overlay ==========*/
+    --img-transition: .3s;
+    --img-hidden: hidden;
+    --img-scale: scale(1.1);
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    background-color: var(--body-color);
+}
+
+.title{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-decoration: underline 4px;
+}
+
+
+.questions-container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.question{
+    border-bottom: 1px solid #fff;
+}
+.question button{
+    width: 100%;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border:none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.question p{
+    font-size: 22px;
+    max-height: 0;
+    opacity: 0;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+.d-arrow{
+    transition: transform 0.5s ease-in ;
+    color: #fff;
+}
+
+/*add this class when click*/
+.question p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
+
+.go-back-link {
+  position: relative;
+  top: 70px; 
+  right: -170px; 
+  color: var(--second-color);
+  cursor: pointer; 
+  transition: color 0.3s; 
+  font-size: 20px;
+  text-decoration: none; 
+}
+
+.go-back-link:hover {
+  color: white;
+}
+.ri-arrow-left-s-line .go-back-arrow {
+  font-size: 1.5rem;
+  top: 0;
+  right: 0;
+}

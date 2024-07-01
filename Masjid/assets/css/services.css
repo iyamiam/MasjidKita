@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --header-height: 3rem;
+  
+    /*========== Colors ==========*/
+    /* Change favorite color to match images */
+    /*Green dark 190 - Green 171 - Grren Blue 200*/
+    --hue-color: 190;
+  
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 64%, 22%);
+    --first-color-second: hsl(var(--hue-color), 64%, 22%);
+    --first-color-alt: hsl(var(--hue-color), 64%, 15%);
+    --second-color: hsl(195, 75%, 52%);
+    --title-color: hsl(var(--hue-color), 64%, 18%);
+    --text-color: hsl(var(--hue-color), 24%, 35%);
+    --text-color-light: hsl(var(--hue-color), 8%, 60%);
+    --input-color: hsl(var(--hue-color), 24%, 97%);
+    --body-color: hsl(var(--hue-color), 29%, 12%);
+    --white-color: #FFF;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+  
+    /*========== Font and typography ==========*/
+    --body-font: 'Open Sans', sans-serif;
+    --title-font: 'Raleway', sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== Margenes Bottom ==========*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  
+    /*========== Hover overlay ==========*/
+    --img-transition: .3s;
+    --img-hidden: hidden;
+    --img-scale: scale(1.1);
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    background-color: var(--body-color);
+}
+
+
+.wrapper{
+    font-family: 'poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 110px;
+}
+.wrapper h1{
+    font-size: 3em;
+    margin: 25px;
+}
+.content-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-top: 30px;
+}
+.card{
+    min-height: 220px;
+    width: 320px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:var(--body-color);
+    margin: 10px 4px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+    border: 1px solid #fff;
+}
+.card i{
+    margin: 20px;
+    color: #581ed6;
+}
+.card h2{
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+}
+.card p{
+    color: #6c757d;
+    text-align: center;
+}
+.card:hover i,
+.card:hover p{
+    color: #fff;
+}
+.card:hover h2{
+    font-weight: 600;
+}
+.card:nth-child(1):hover{
+    background: linear-gradient(45deg,
+    rgba(88, 70, 159, 0.7) 0% ,
+    rgba(136, 113, 199, 0.7)100% ) ,
+    url('bg.jpg');
+    background-size: cover;
+}
+.card:nth-child(2):hover{
+    background: linear-gradient(45deg,
+    rgba(88, 70, 159, 0.7) 0% ,
+    rgba(136, 113, 199, 0.7)100% ) ,
+    url('bg2.jpg');
+    background-size: cover;
+}
+.card:nth-child(3):hover{
+    background: linear-gradient(45deg,
+    rgba(88, 70, 159, 0.7) 0% ,
+    rgba(136, 113, 199, 0.7)100% ) ,
+    url('bg3.jpg');
+    background-size: cover;
+}
+.card:nth-child(4):hover{
+    background: linear-gradient(45deg,
+    rgba(88, 70, 159, 0.7) 0% ,
+    rgba(136, 113, 199, 0.7)100% ) ,
+    url('bg4.jpg');
+    background-size: cover;
+}
+.card:nth-child(5):hover{
+    background: linear-gradient(45deg,
+    rgba(88, 70, 159, 0.7) 0% ,
+    rgba(136, 113, 199, 0.7)100% ) ,
+    url('bg5.jpg');
+    background-size: cover;
+}
+.card:nth-child(6):hover{
+    background: linear-gradient(45deg,
+    rgba(88, 70, 159, 0.7) 0% ,
+    rgba(136, 113, 199, 0.7)100% ) ,
+    url('bg2.jpg');
+    background-size: cover;
+}
+
+.go-back-link {
+  position: relative;
+  top: 90px; 
+  right: -240px; 
+  color: var(--second-color);
+  cursor: pointer; 
+  transition: color 0.3s; 
+  font-size: 20px;
+  text-decoration: none; 
+}
+
+.go-back-link:hover {
+  color: white;
+}
+.ri-arrow-left-s-line .go-back-arrow {
+  font-size: 1.5rem;
+  top: 0;
+  right: 0;
+}
+
+@media(max-width:991px){
+    .wrapper{
+        padding: 25px;
+    }
+    .wrapper h1{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .content-box{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        min-width: 300px;
+        margin: 10px auto;
+    }
+}

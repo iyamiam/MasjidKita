@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- <link rel="stylesheet" href="assets/css/stylesjadwal.css"> -->
+
+
+        <title>MasjidKita</title>
+    </head>
+    <body class="dark-theme">
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">MASJIDKITA</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="index.html#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="doa.html" class="nav__link active-link">Doa-Doa</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="alquran.html" class="nav__link">Al-Qur'an</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home parallax" id="home">
+                <div class="parallax__container">
+                    <img src="assets/img/home1.jpg" alt="" class="home__img">
+                </div>
+
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <span class="home__data-subtitle">MasjidKita</span>
+                        <h1 class="home__data-title">Mosque The <br> Best <b>And <br> Beautiful</b></h1>
+                    </div>
+
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <div id="location" class="card">
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <div id="area-location"></div>
+                </div>
+            </div>
+            
+            <div class="prayer-cards-container" id="prayer-cards-container">
+                <div id="prayer-timings">
+                    <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <div id="prayer-timings-content"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="about section">
+                <div class="countdown-cards-container" id="countdown-cards-container">
+                    <div id="countdown">
+                        <div class="card-body">
+                            <h5 class="card-title">Hitung Mundur Waktu Sholat</h5>
+                            <div id="countdown-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== DISCOVER ====================-->
+            <section class="discover section" id="doadoa">
+                <h2 class="section__title">Doa - Doa</h2>
+                
+                    <!-- Dropdown untuk memilih doa -->
+                    <div class="custom-dropdown">
+                        <select id="doaSelector" onchange="selectDoa()" title="Select a prayer"></select>
+                            <!-- Options akan diisi oleh JavaScript -->
+                        <div class="dropdown-content">
+                            <!-- Options akan diisi oleh JavaScript -->
+                        </div>
+                    </div>
+
+                <!-- Tampilkan informasi doa -->
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-center mb-4"></h1>
+                        <h2 id="doa-title"></h2><br>
+                        <p id="doa-text"></p><br>
+                        <p id="doa-transliteration"></p>
+                        <p id="doa-translation"></p><br>
+                        <p id="doa-history"></p>
+                    </div>
+                </div>
+
+                <div class="discover__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--==================== DISCOVER 1 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="assets/img/doa1.jpg" alt="" class="discover__img">
+                        </div>
+
+                        <!--==================== DISCOVER 2 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="assets/img/doa2.jpg" alt="" class="discover__img">
+                        </div>
+
+                        <!--==================== DISCOVER 3 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="assets/img/doa3.jpg" alt="" class="discover__img">
+                        </div>
+
+                        <!--==================== DISCOVER 4 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="assets/img/doa4.jpg" alt="" class="discover__img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== EXPERIENCE ====================-->
+            <section class="experience section">
+                <h2 class="section__title"> Jumlah <br> Doa - Doa </h2>
+
+                <div class="experience__container container grid">
+                    <div class="experience__content grid">
+                        <div class="experience__data">
+                            <h2 class="experience__number">100+</h2>
+                            <span class="experience__description">Doa<br> Harian </span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">75</h2>
+                            <span class="experience__description">Doa <br> Shalat</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== VIDEO ====================-->
+            <section class="video section">
+                <h2 class="section__title">Masjid Video </h2>
+
+                <div class="video__container container">
+                    <p class="video__description">Lihat keindahan setiap masjid yang ada di Indonesia.
+                    </p>
+
+                    <div class="video__content">
+                        <video id="video-file">
+                            <source src="assets/video/The Grand Mosque Al Jabbar_2.mp4" type="video/mp4">
+                        </video>
+
+                        <button class="button button--flex video__button" id="video-button">
+                            <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div class="footer__data">
+                        <h3 class="footer__title">MasjidKita</h3>
+                        <p class="footer__description">Masjid Website ini<br> Di buat untuk semua pengguna
+                             <br> agar lebih mudah untuk melihat jadwal shalat dan lain-lainnya.
+                        </p>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">About</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="index.html#about" class="footer__link">About Us</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="features.html" class="footer__link">Features</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Company</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="team.html" class="footer__link">Team</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Support</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="faq.html" class="footer__link">FAQ's</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="services.html" class="footer__link">Services Center</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="https://wa.me/6281646846471/?text=Hallo saya mau bertanya!" class="footer__link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2023 MasjidKita</p>
+                    <div class="footer__terms">
+                        <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                        <a href="#" class="footer__terms-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/doa.js"></script>
+        <script src="assets/js/countdown.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
